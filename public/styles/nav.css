@@ -8,15 +8,16 @@
   color: #e8fdff;
 }
 
-.logo{
+#nav-bar .logo {
   height: 80px;
   width: 80px;
   float: left;
   margin-right: 10px;
 }
 
-.header{
+#nav-bar .header {
   font-size: 200%;
   float: left;
   line-height: 2.5;
 }
+
