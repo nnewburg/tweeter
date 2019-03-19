@@ -27,44 +27,44 @@ textarea{
   min-width: 100%;
 }
 
-.tweet{
+article.tweet{
   overflow: hidden;
   position: relative;
   margin: 0 2em;
+  margin-top: 1em;
   border: 1px solid black;
   height: 230px;
-  border-radius: 2.5%
+  border-radius: 2.5%;
+  opacity: 0.7;
 }
 
-article.tweet h1{
-  margin-top: 0.25em;
-  height: 25%;
-  display: inline;
+.tweet .tweetContent{
+  margin-left: 2em;
+  margin-right: 2em;
+  opacity: 1;
+}
+
+.tweet h2{
+  margin-top: 0.4em;
+  display: inline-block;
   vertical-align: top;
 }
 
-article.tweet header span{
+.tweet header span{
   float: right;
   margin-top: 1em;
   margin-right: 0.75em;
 }
 
-article.tweet p{
-  margin-left: 2em;
-  margin-right: 2em;
+.tweet img{
+  border-radius: 10%;
 }
 
-article.tweet img{
-  padding: 0.25em;
-
-}
-
-#imgContainer{
-  border: 1px solid black;
+.imgContainer{
+  border: 1px #eee solid;
   border-radius: 5%;
   display: inline-block;
   margin: 0.5em;
-  background-color: fuchsia;
 }
 
 .tweet header{
@@ -79,9 +79,17 @@ article.tweet img{
   bottom: 0;
 }
 
-article.tweet footer span{
+.tweet footer span{
   font-size: 12px;
   padding-left: 1em;
   line-height: 30px
+}
+
+.tweetIcon{
+  display: none;
+  width: 30px;
+  height: 30px;
+  color: blue;
+  float: right;
 }
 
