@@ -27,3 +27,18 @@ textarea{
   min-width: 100%;
 }
 
+.tweet{
+  margin: 0 2em;
+  border: 1px solid black;
+  height: 230px;
+  border-radius: 2.5%
+}
+
+article.tweet h1{
+  margin-top: 0em;
+  height: 25%
+}
+
+#tweetcontainer{
+
+}
