@@ -19,13 +19,12 @@ body {
   margin: 0;
   color: #244751;
   background-color: #eee;
-
 }
 
 main{
   width: 450px;
   margin: 0 auto;
-  margin-top: 80px;
+  padding-top: 80px;
   background-color: white;
 }
 
