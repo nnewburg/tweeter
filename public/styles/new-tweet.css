@@ -28,6 +28,8 @@ textarea{
 }
 
 .tweet{
+  overflow: hidden;
+  position: relative;
   margin: 0 2em;
   border: 1px solid black;
   height: 230px;
@@ -35,10 +37,51 @@ textarea{
 }
 
 article.tweet h1{
-  margin-top: 0em;
-  height: 25%
+  margin-top: 0.25em;
+  height: 25%;
+  display: inline;
+  vertical-align: top;
 }
 
-#tweetcontainer{
+article.tweet header span{
+  float: right;
+  margin-top: 1em;
+  margin-right: 0.75em;
+}
+
+article.tweet p{
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+article.tweet img{
+  padding: 0.25em;
 
 }
+
+#imgContainer{
+  border: 1px solid black;
+  border-radius: 5%;
+  display: inline-block;
+  margin: 0.5em;
+  background-color: fuchsia;
+}
+
+.tweet header{
+  background-color: #eee;
+}
+
+.tweet footer{
+  border-top: 1px gray solid;
+  height: 15%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+article.tweet footer span{
+  font-size: 12px;
+  padding-left: 1em;
+  line-height: 30px
+}
+
