@@ -80,7 +80,6 @@ article.tweet{
 
 .tweet header{
   background-color: #eee;
-  opacity: 0.7;
 }
 
 .tweet footer{
@@ -89,7 +88,6 @@ article.tweet{
   width: 100%;
   position: absolute;
   bottom: 0;
-
 }
 
 .tweet footer span{
