@@ -74,25 +74,18 @@ $(document).ready(function() {
         .then(function (tweetDB) {
         let temp = tweetDB;
         if(count === 0){
-          console.log(temp.length)
           count ++;
           renderTweets(temp);
         } else {
-            for(let i = 0; i <= temp.length; i++){
+            while(temp.length > 1){
               temp.shift();
             }
-            console.log(temp.length)
             renderTweets(temp);
           }
 
          });
         }
 
-        // return dbTweets;
-
 loadTweets();
-
-
-   //renderTweets(data);
 
 });
