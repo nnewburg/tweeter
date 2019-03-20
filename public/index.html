@@ -20,7 +20,8 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-    <script type="text/javascript" src="/scripts/hoverIllum.js"></script>
+    <script type="text/javascript" src="/scripts/formSubmission.js"></script>
+
   </head>
 
   <body>
@@ -34,10 +35,9 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-          <form action="/tweets" method="POST">
+          <form id="tweetForm" action="/tweets" method="POST">
             <textarea id ="newTweetTxt" name="text" placeholder="What are you humming about?"></textarea>
            <input type="submit" value="Tweet">
           <span class="counter">140</span>

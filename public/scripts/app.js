@@ -48,11 +48,6 @@ $(document).ready(function() {
 ];
 
 
-
-renderTweets(data);
-
-
-
       function renderTweets(tweets) {
         let temp = ""
           for(let i = 0; i < tweets.length; i++){
@@ -98,5 +93,23 @@ renderTweets(data);
       return $tweet;
       }
 
+      function loadTweets(){
+
+
+        console.log('Button clicked, performing ajax call...');
+        $.ajax('/tweets', { method: 'GET' })
+        .then(function (tweetDB) {
+        console.log('Success: ', tweetDB);
+        // let dbTweets = JSON.stringify(morePostsHtml)
+        // console.log(dbTweets);
+        renderTweets(tweetDB);
+         });
+
+        // return dbTweets;
+      }
+
+     loadTweets();
+
+   //renderTweets(data);
 
 });
