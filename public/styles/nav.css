@@ -23,4 +23,25 @@
 }
 
 
+.composeBtn{
+  height: 75%;
+  width: 120px;
+  border-radius: 10%;
+  border: 1px black solid;
+  float: right;
+  margin-top: 0.5em;
+  margin-right: 2em;
+  background-color: white;
+  color: black;
+  padding-top: 0.25em;
+}
+
+#composeIcon{
+  margin-left: 1em;
+  margin-top: 0.75em;
+  width: 20px;
+  height: 20px;
+}
+
+
 
