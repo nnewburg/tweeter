@@ -1,9 +1,12 @@
 $(document).ready(function() {
 
- $('#tweetForm').on('submit',function(e){
+  $(".error-message").hide()
 
+ $('#tweetForm').on('submit',function(e){
+    $(".error-message").hide()
     e.preventDefault();
     if(Number($('.counter').html()) >= 0 && Number($('.counter').html()) !== 140){
+
     let data = $('#tweetForm').serialize();
      $.ajax({
           url:'/tweets',
@@ -17,7 +20,12 @@ $(document).ready(function() {
           }
         })
    } else{
-      alert("tweet too long or too empty")
+      $( ".error-message").slideToggle()
+      if(Number($('.counter').html()) < 0){
+        $('.errorContent').text("You went over the character limit")
+      } else {
+        $('.errorContent').text("Cant send an empty Tweet")
+      }
    }
   });
 
@@ -65,6 +73,7 @@ $(document).ready(function() {
 
       return $tweet;
       }
+
 
       let count = 0;
 

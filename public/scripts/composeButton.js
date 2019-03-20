@@ -4,11 +4,6 @@ $(function() {
 
 $( ".new-tweet" ).hide()
 
-
-
-
-
-
   $('.composeBtn').click( function(){
 
     if(!clicked){
