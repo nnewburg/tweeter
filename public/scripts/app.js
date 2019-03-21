@@ -61,7 +61,8 @@ $(document).ready(function() {
         $tweet.append(content);
 
         let foot = $('<footer>')
-        let dateStamp = $('<span>').text(tweet.created_at)
+        let time = new Date(tweet.created_at);
+        let dateStamp = $('<span>').text(time.toLocaleString())
         let flagIcon = $('<img>').addClass("tweetIcon").attr("src", "/images/flag.jpeg" )
         let retweetIcon = $('<img>').addClass("tweetIcon").attr("src", "/images/retweet.png" )
         let likeIcon = $('<img>').addClass("tweetIcon").attr("src", "/images/like.png" )

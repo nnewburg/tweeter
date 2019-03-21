@@ -20,5 +20,6 @@ $(document).ready(function() {
       //changes the counter's text to the remaining characters available
      $(counter).text(140 - this.value.length)
 
+
   });
 });

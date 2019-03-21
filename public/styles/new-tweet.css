@@ -43,6 +43,7 @@ textarea{
   min-height: 64px;
   max-width: 100%;
   min-width: 100%;
+  overflow-wrap: break-word;
 }
 
 article.tweet:hover *{
