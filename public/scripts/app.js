@@ -5,15 +5,15 @@ $(document).ready(function() {
 
 //Hides the error message on load of screen
   $(".error-message").hide();
-
-//jqeury event on submission of the new tweet form
  $('#tweetForm').on('submit',function(e){
     $(".error-message").hide();
     e.preventDefault();
-    //conditional to make sure the text area is not empty or over 140 characters
-    if(Number($('.counter').html()) >= 0 && Number($('.counter').html()) !== 140){
-    //make the textarea input be transfered into the /tweets route with the ajax method
     let data = $('#tweetForm').serialize();
+
+
+    //conditional to make sure the text area is not empty or over 140 characters
+    if(Number($('.counter').html()) >= 0 && Number($('.counter').html()) !== 140 && !/\S/.test(data.replace('text=', ''))){
+    //make the textarea input be transfered into the /tweets route with the ajax method
      $.ajax({
           url:'/tweets',
           method: 'post',
