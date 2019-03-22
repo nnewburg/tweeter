@@ -15,3 +15,14 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Body Parser
+- Chance
+- MongoDB
+
+## Screenshots
+
+!["Screenshot of page load"](https://github.com/nnewburg/tweeter/blob/master/docs/loadPageTweeter.png?raw=true)
+!["Screenshot of compose tweet"](https://github.com/nnewburg/tweeter/blob/master/docs/newTweetTweeter.png?raw=true)
+!["Screenshot of a posted tweet"](https://github.com/nnewburg/tweeter/blob/master/docs/postedTweet.png?raw=true)
+!["Screenshot of error message"](https://github.com/nnewburg/tweeter/blob/master/docs/errorMessage.png?raw=true)
+!["Screenshot of hovering over a tweet"](https://github.com/nnewburg/tweeter/blob/master/docs/hoverShowIcons.png?raw=true)
