@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 
     //conditional to make sure the text area is not empty or over 140 characters
-    if(Number($('.counter').html()) >= 0 && Number($('.counter').html()) !== 140 && !/\S/.test(data.replace('text=', ''))){
+    if(Number($('.counter').html()) >= 0 && Number($('.counter').html()) !== 140){
     //make the textarea input be transfered into the /tweets route with the ajax method
      $.ajax({
           url:'/tweets',
