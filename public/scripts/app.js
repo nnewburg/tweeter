@@ -6,13 +6,14 @@ $(document).ready(function() {
 //Hides the error message on load of screen
   $(".error-message").hide();
  $('#tweetForm').on('submit',function(e){
-    $(".error-message").hide();
+  $(".error-message").hide();
     e.preventDefault();
     let data = $('#tweetForm').serialize();
 
 
     //conditional to make sure the text area is not empty or over 140 characters
     if(Number($('.counter').html()) >= 0 && Number($('.counter').html()) !== 140){
+      $(".error-message").hide();
     //make the textarea input be transfered into the /tweets route with the ajax method
      $.ajax({
           url:'/tweets',
