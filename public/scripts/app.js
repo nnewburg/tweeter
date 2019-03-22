@@ -14,7 +14,7 @@ $(document).ready(function() {
 
 
     //conditional to make sure the text area is not empty or over 140 characters
-    if(Number($('.counter').html()) >= 0 && Number($('.counter').html()) !== 140 && !/\S/.test(data.replace('text=', ''))){
+    if(Number($('.counter').html()) >= 0 && Number($('.counter').html()) !== 140){
     //make the textarea input be transfered into the /tweets route with the ajax method
 
      $.ajax({
@@ -70,7 +70,8 @@ $(document).ready(function() {
         foot.append($('<span>').text(time.toLocaleString()));
         foot.append($('<img>').addClass("tweetIcon").attr("src", "/images/flag.jpeg" ));
         foot.append($('<img>').addClass("tweetIcon").attr("src", "/images/retweet.png" ));
-        foot.append($('<img>').addClass("tweetIcon").attr("src", "/images/like.png" ));
+        foot.append($('<img>').addClass("tweetIcon likesIcon").attr("src", "/images/like.png" ));
+
         $tweet.append(foot);
 
       return $tweet;

@@ -41,7 +41,27 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
     });
 
     app.post("/register", (req, res) => {
+      let flag = true;
+      var user = { email: req.body.email, password: req.body.password };
 
+      db.collection("users").findOne({"email": req.body.email}, function(err, result) {
+       if (err) throw err;
+
+        if(result.email === req.body.email){
+          flag = false;
+          console.log("same email")
+        }
+      });
+        console.log(flag)
+        if(flag){
+          db.collection("users").insertOne(user, function(err, res) {
+            if (err) throw err;
+            console.log("1 document inserted");
+          });
+        } else {
+          alert("Email already exists in the database")
+          res.redirect("/register");
+        }
       res.redirect("/");
     });
 
