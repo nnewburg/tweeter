@@ -11,6 +11,8 @@ const MONGODB_URI   = "mongodb://localhost:27017/tweeter";
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
+app.engine('html', require('ejs').renderFile);
+// app.set("view engine", "html");
 
 //connecting to our Mongo DB with a given URI
 MongoClient.connect(MONGODB_URI, (err, db) => {
@@ -30,12 +32,27 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
 
     const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
+
     app.use("/tweets", tweetsRoutes);
 
+    app.get("/register", (req, res) => {
+      let templateVars = {};
+      res.render("register.html");
+    });
+
+    app.post("/register", (req, res) => {
+
+      res.redirect("/");
+    });
+
+    app.post
 
     app.listen(PORT, () => {
     console.log("Example app listening on port " + PORT);
   });
+
+
+
 
 
 });
