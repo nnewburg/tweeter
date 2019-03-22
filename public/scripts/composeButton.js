@@ -30,12 +30,20 @@ $( ".new-tweet" ).hide()
 
   }, function() {
     if(!clicked){
-    $(this).css("opacity", "1")
+      $(this).css("opacity", "1")
+    }
   }
-  }
-
 );
 
+   $( ".login" ).hover(
+
+  function() {
+      $(this).css("opacity", "0.6")
+
+  }, function() {
+    $(this).css("opacity", "1")
+  }
+)
 
 });
 

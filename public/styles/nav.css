@@ -42,5 +42,30 @@
   height: 20px;
 }
 
+.login{
+  height: 75%;
+  width: 120px;
+  border-radius: 10%;
+  border: 1px black solid;
+  float: right;
+  margin-top: 0.5em;
+  margin-right: 2em;
+  background-color: white;
+  color: black;
+  padding-top: 1em;
+  padding-left: 2em;
+}
 
-
+.register{
+  height: 75%;
+  width: 120px;
+  border-radius: 10%;
+  border: 1px black solid;
+  float: right;
+  margin-top: 0.5em;
+  margin-right: 2em;
+  background-color: white;
+  color: black;
+  padding-top: 1em;
+  padding-left: 2em;
+}

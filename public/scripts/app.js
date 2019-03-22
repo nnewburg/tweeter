@@ -13,6 +13,8 @@ $(document).ready(function() {
           method: 'post',
           data: data,
           success: function(result){
+            $('.counter').text(140)
+            $('#newTweetTxt').val('')
            loadTweets();
           },
           error: function(err){
