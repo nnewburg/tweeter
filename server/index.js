@@ -12,17 +12,19 @@ const MONGODB_URI   = "mongodb://localhost:27017/tweeter";
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
+//connecting to our Mongo DB with a given URI
 MongoClient.connect(MONGODB_URI, (err, db) => {
 
+  //error conditional
   if (err) {
     console.error(`Failed to connect: ${MONGODB_URI}`);
     throw err;
   }
 
-  // We have a connection to the "tweeter" db, starting here.
+
   console.log(`Connected to mongodb: ${MONGODB_URI}`);
 
-  // ==> Refactored and wrapped as new, tweet-specific function:
+
 
     const DataHelpers = require("./lib/data-helpers.js")(db);
 
