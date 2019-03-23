@@ -7,6 +7,17 @@ const tweetsRoutes  = express.Router();
 
 module.exports = function(DataHelpers) {
 
+
+  tweetsRoutes.post("/like", function(req, res) {
+    DataHelpers.addlike(req, (err, tweet) => {
+      if (err) {
+        res.status(500).json({ error: err.message });
+      } else {
+        res.json(tweet);
+      }
+    });
+  });
+
   tweetsRoutes.get("/", function(req, res) {
     DataHelpers.getTweets((err, tweets) => {
       if (err) {

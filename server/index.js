@@ -23,14 +23,14 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
     throw err;
   }
 
-
-  console.log(`Connected to mongodb: ${MONGODB_URI}`);
+    console.log(`Connected to mongodb: ${MONGODB_URI}`);
 
 
 
     const DataHelpers = require("./lib/data-helpers.js")(db);
 
     const tweetsRoutes = require("./routes/tweets")(DataHelpers);
+
 
 
     app.use("/tweets", tweetsRoutes);
@@ -47,25 +47,29 @@ MongoClient.connect(MONGODB_URI, (err, db) => {
       db.collection("users").findOne({"email": req.body.email}, function(err, result) {
        if (err) throw err;
 
+       if(result){
         if(result.email === req.body.email){
           flag = false;
           console.log("same email")
         }
-      });
+      }
+
+
         console.log(flag)
         if(flag){
-          db.collection("users").insertOne(user, function(err, res) {
+          db.collection("users").insertOne(user, function(err, resp) {
             if (err) throw err;
             console.log("1 document inserted");
+             res.redirect("/");
           });
         } else {
-          alert("Email already exists in the database")
-          res.redirect("/register");
+          res.send("error")
+          //res.redirect("/register");
         }
-      res.redirect("/");
-    });
 
-    app.post
+    });
+});
+
 
     app.listen(PORT, () => {
     console.log("Example app listening on port " + PORT);

@@ -54,6 +54,7 @@ $(document).ready(function() {
       function createTweetElement(tweet){
 
         let $tweet = $('<article>').addClass('tweet');
+        $tweet.attr("id", tweet._id);
         let header = $('<header>').append($('<div>').addClass("imgContainer").append($('<img>').attr({
           src: tweet.user.avatars.small,
           height: "50px",
@@ -68,6 +69,7 @@ $(document).ready(function() {
         let foot = $('<footer>');
         let time = new Date(tweet.created_at);
         foot.append($('<span>').text(time.toLocaleString()));
+        foot.append($('<span>').addClass("likescount").text(tweet.likes))
         foot.append($('<img>').addClass("tweetIcon").attr("src", "/images/flag.jpeg" ));
         foot.append($('<img>').addClass("tweetIcon").attr("src", "/images/retweet.png" ));
         foot.append($('<img>').addClass("tweetIcon likesIcon").attr("src", "/images/like.png" ));
