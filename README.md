@@ -7,7 +7,7 @@ This repository is the starter code for the project: Students will fork and clon
 ## Lessons Learned
 1. Practiced on HTML and CSS styling
 2. Jquery events such as hover and click
-3. MongoDB basics and passing data thru functions to render those objects
+3. MongoDB basics and passing data through functions to render those objects
 4. Jquery to create a DOM element shell then pass an Object to define the elements' properties
 
 ## Getting Started
